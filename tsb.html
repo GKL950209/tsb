@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+			<input type="number" v-model="width" />
+			<input type="number" v-model="height" />
+			<br/>
+			<input type="color" v-model="bg" />
+			<div class="color" v-bind:style="{width:width+'px',height:height+'px',background:bg}">aaa</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el:"#box",
+		data:{
+			width:200,
+			height:200,
+			bg:"#ccc"
+		}
+	})
+</script>
